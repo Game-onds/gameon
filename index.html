@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+<head>
+ <title>Game on</title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<title>Untitled Document</title>
+<meta charset="utf-8">
+<meta name="keywords" content="anything you want">
+<meta http-equiv="refresh" content="240">
+<meta name="viewport" content="width=device-width;initial scale=1.0">
+<meta name="description" content="free to Join our discord server">
+<link rel="icon" href="WhatsApp Group Invite.jfif">
+<link rel="stylesheet" type="text/css" href="all.css">
+
+<style>
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(47, 0, 255); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: rgb(128, 120, 120); /* Add a dark-grey background on hover */
+}
+/* Dropdown Button */
+.dropbtn {
+  
+  
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 3px solid #ffffff;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(133, 134, 219);
+  border: 3px solid #ffffff;
+  
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* dropdown button style end */
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(122, 122, 122);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 0, 255);
+  border-radius: 1px;
+}
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: rgb(240, 239, 239);
+  color:#ffffff;
+}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #0400ff73; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #2600ff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: rgb(68, 0, 255);
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: rgb(250, 250, 250);
+  color: #000000;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <!--header start--><div class="header" id="myHeader">
+  
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+             <img src="WhatsApp Group Invite.jpg" fill="fill" stroke-linecap="round" class="w-12 h-12 text-white p-0 bg-indigo-500 rounded-full" viewBox="0 0 24 24" >
+            
+            <span class="ml-3 text-xl">GAME ON</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <div class="dropdown">
+              <button class="dropbtn">ABOUT US</button>
+              <div class="dropdown-content">
+                <a href="memberstat .html">ABOUT OUR TEAM</a>
+                <a href="github eq\LICENSE.html">LICENSE</a>
+              </div>
+            </div>
+            <div class="dropdown">
+            <button class="dropbtn">GET DISCORD</button>
+            <div class="dropdown-content">
+              <a href="https://play.google.com/store/apps/details?id=com.discord&hl=en_IN&gl=US">DISCORD ANDROID</a>
+              <a href="https://discord.com/download">DISCORD COMPUTER</a>
+            </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">HOW TO USE DISCORD</button>
+              <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=HKvUpY8IIr8">HOW TO USE DISCORD ANDROID</a>
+                <a href="https://www.youtube.com/watch?v=OIqyPJQAgT4">HOW TO USE DISCORD COMPUTER</a>
+                
+              </div>
+            </div>
+              <div class="dropdown">
+              <a href="youtuber.html"><button >YOUTUBER</button></a>
+              
+              
+  
+           </nav><div id="mydivheader" ><button class="openbtn" onclick="openNav()">&#9776; </button></div>
+          <a href="snake.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Bored
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button></a>
+        </div>
+      </header>
+    </div>
+     <!--header end-->
+    
+    <span id="emailid"></span>
+  
+     <!--section start-->
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Join our discord 
+            <br class="hidden lg:inline-block">server Game on 
+            </h1>
+            <p class="mb-8 leading-relaxed">This server is for everyone. we can study, chat, you can meet new people and also for gaming topices, and one more thing if your are a developer you are at right place get set and go. </p>
+            <div class="flex justify-center">
+             <a href="https://discord.gg/nSCTtkh2NW"> <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Join now</button></a>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <video width="500" height="240" autoplay loop >
+              <source src="Gameon-business-PixTeller.mp4" type="video/mp4">
+            
+            </video> 
+          </div>
+        </div>
+      </section>
+      <!--section end-->
+       <!-- log in request start -->
+     <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+          <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">Sign in to our website and unlock features.</h1>
+          <a href="sign in.html"><button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0"><strong>Sign in</strong></button></a>
+        </div>
+      </div>
+    </section>
+     <!-- log in request end -->
+      
+      
+     <!--member stats starts-->
+     <section class="text-gray-600 body-font">
+      <div class="container flex flex-wrap px-5 py-24 mx-auto items-center">
+        <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">      memberstats</h1>
+          <p class="leading-relaxed text-base">memberstats, this embed will tell you how many people are there in our server and also about voice chanal</p>
+          <a class="text-indigo-500 inline-flex items-center mt-4" href="sign in.html">Sign in
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <iframe src="https://discord.com/widget?id=890187035447545867&theme=white" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+      </div>
+    </section>
+     <!--member stats end-->
+     <!--scroll up button format start-->
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+     <!--scroll up button format end-->
+    
+     
+     
+
+</div>
+     <!--footer start-->
+      <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">GAME ON</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 GAME ON — all rights reserved. #gameondc                     
+            <a href="https://twitter.com/aryanxp308" class="text-gray-600 ml-1" rel="twitter off" target="_blank">@aryanxp308</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+           
+            <a href="https://twitter.com/aryanxp308" class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <a class="ml-3 text-gray-500">
+                <i class="fab fa-discord" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24"></i>
+              </a>
+            </a>
+          </span>
+        </div>
+      </footer>
+      <p>lastname</p>
+      <!--footer end-->
+      <!-- javascript starts -->
+      <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDwbLSlOAwhLvHx8-qwxudAcMgxJqouYHo",
+    authDomain: "game-on-baa99.firebaseapp.com",
+    projectId: "game-on-baa99",
+    storageBucket: "game-on-baa99.appspot.com",
+    messagingSenderId: "1095942894371",
+    appId: "1:1095942894371:web:fa8c29c800874d9f125296",
+    measurementId: "G-GSC0LQKL80"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+      <script>//Get the button:
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        //Get the button:
+      mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+     
+
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+};
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+  document.getElementById("emailid").innerHTML=localStorage.getItem("username");
+  document.getElementById("username").innerHTML=localStorage.getItem("username");
+
+
+
+         </script>
+         <div id="username"></div>
+         <!-- javascript end -->
+         <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="memberstat .html">About</a>
+          <a href="sign in.html">Sign in</a>
+          <a href="snake.html">Games</a>
+          <a href="index.html">Home</a>
+          <a href="youtuber.html">Youtuber</a>
+        </div>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="    viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+  <style>
+    #aftersignin{
+      display: none;
+      font-family: Nunito;
+    }
+    
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDwbLSlOAwhLvHx8-qwxudAcMgxJqouYHo",
+    authDomain: "game-on-baa99.firebaseapp.com",
+    projectId: "game-on-baa99",
+    storageBucket: "game-on-baa99.appspot.com",
+    messagingSenderId: "1095942894371",
+    appId: "1:1095942894371:web:ed5f918502013110125296",
+    measurementId: "G-YMMGN15EP4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth =  firebase.auth();
+
+  //signup function
+  function signUp(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+
+    const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+    //
+    promise.catch(e=>alert(e.message));
+    alert("SignUp Successfully");
+  }
+
+  //signIN function
+  function  signIn(){
+    var email = document.getElementById("email");
+    var password  = document.getElementById("password");
+    const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=>alert(e.message));
+    
+  }
+
+
+  //signOut
+
+  function signOut(){
+    auth.signOut();
+    alert("Signout Successfully from System");
+  }
+
+  //active user to homepage
+  firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+      var email = user.email;
+     alert(" you are sucessfully sign in as " + email)
+   
+    //   document.getElementById('sign in win').style.display="none";
+    //   document.getElementById('aftersignin').style.display="block";
+    
+    }else{
+      alert("No Active user Found")
+    }
+  })
+ function signinusername() {
+  let person = prompt("Please enter your name", "");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }
+}
+ 
+
+</script>
+    <title>Login System</title>
+   
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+      <form >
+<div class="formcontainer" id="sign in win">
+  <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+      <h1 class="title-font font-medium text-3xl text-gray-900">SIGN TO OUR WEBSITE</h1>
+      <p class="leading-relaxed mt-4">There are three buttons and two input in first input you need to enter your email and in second you need to enter you password.After that if,you are already signup you need to press signin and for if you want to signout just click on signout.</p>
+    </div>
+    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign In</h2>
+     
+      <div class="relative mb-4">
+         <label for="full-name" class="leading-7 text-sm text-gray-600">email</label>
+        <input type="email" placeholder="email here..." id="email"  name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Password</label>
+        <input type="password" placeholder="password here" id="password"  name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <p class="text-xs text-gray-500 mt-3">New here click Signup</p>
+      <button onclick="signUp(),passvalue()" id="signup" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg " class="tablinks">Signup</button>
+      <p class="text-xs text-gray-500 mt-3">already Signup click Signin</p>
+      <button onclick="signIn(),passvalue(),usernamepro()" value="click" type="submit" id="signip" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signin</button>
+      <p class="text-xs text-gray-500 mt-3">want to go now just click Signout</p>
+      <button onclick="signOut()" id="signout" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signout</button>
+      <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+    </div>
+  </div>
+</section>
+</div>
+</form>
+
+</body>
+</html>

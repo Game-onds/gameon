@@ -1,0 +1,22 @@
+
+<html><head>
+
+</head>
+<body>
+    <script>
+        function mybutton(){
+       document.getElementById('first').style.display ='block';
+        }
+        function mybuttonclose(){
+            document.getElementById('first').style.display ='none';
+        }
+        function myp(){
+            var myp = document.getElementById('first');
+            myp.innerHTML = "<p>" + "hello world" + "</p>";
+        }
+    </script>  
+    <button onclick="mybuttonclose()">close</button>
+    <button onclick="mybutton()">open</button>
+    <center><div id="first" style="background-color: rgba(217, 215, 250, 0.37);position: fixed"><p style="background-color: rgba(217, 215, 250, 0.37);" >This site is having secure sign in. you need to tap this button to continue</p><button onclick="myp()">click here</button></div></center>
+</body>
+</html>

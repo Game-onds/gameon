@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>youtuber</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+<body>
+<!--yc header start-->
+<div class="container px-5 py-24 mx-auto">
+  <div class="flex flex-col text-center w-full mb-20">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">YouTube channel related with our server</h1>
+    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">these guys do hard work for making you happy with there gameplay.so its you time to dedicate you one subcribe to them. Thank you!</p>
+  </div>
+  <!--yc header end-->
+  <!--channel type start-->
+ <!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">GAMING</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">COMEDY</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+  </button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div  class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="images/opg.jpg">
+          </div>
+          <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">ECONOMICAL GAMING</h2>
+          <p class="leading-relaxed text-base">Hi Gamer, how are you all? Hope your are fine. I am back with a op gameplay/montage of free fire/brawl star. 
+            Hope you like the video/montage of free fire/brawl star. 
+            Please 🙏🙏 subscribe my channel and like the video and share it. 
+            Follow me on other platform</p>
+          <a href="https://www.youtube.com/channel/UC0k9aAE5TI28UV_w09-W0YQ"><button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View now</button></a>
+        </div>
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="images/mohan.png">
+          </div>
+          <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">MYSTERIOS GAMING</h2>
+          <p class="leading-relaxed text-base">Hello guys, I am MYSTERIOS GAMING I am a gamer of ff(freefire), Minecraft and many more game.We all will make fun through video and livesteam.</p>
+         <a href="#"> <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View now</button></a>
+        </div>
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1201x501">
+          </div>
+          <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">SAURAV 55</h2>
+          <p class="leading-relaxed text-base">description</p>
+         <a href="https://www.youtube.com/channel/UCjbpKYsBgz1GCs1lwaQLzHA"> <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View now</button></a>
+        </div>
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1201x501">
+          </div>
+          <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
+            Himanshu Cric keter</h2>
+          <p class="leading-relaxed text-base">description</p>
+         <a href="https://www.youtube.com/channel/UCg8T_UN7Cl-pWGUzM_rBFrg"> <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View now</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3></h3>
+  <p></p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3></h3>
+  <p></p>
+</div>
+<!--channel type end-->
+<!--channel section-->  
+<script>
+      function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+      </body>
+</html>

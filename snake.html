@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link href="all.css" type="stylesheet">
+        <style>
+        body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+    </style>
+<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+</head>
+    <button onclick="myFunction()">Toggle dark mode</button>
+    <body>
+        <i class="far fa-cog"></i>
+        <h1> PLAY A SNAKE GAME</h1>
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <script src="snake.js"></script>
+   <center>
+   <script>      function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }</script></center> </body>
+</html>
